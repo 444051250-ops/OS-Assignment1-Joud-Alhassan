@@ -29,11 +29,11 @@
 
 | Field | Your Answer |
 |-------|-------------|
-| **Full Name** | [Write your full name here] |
-| **Student ID** | [Write your student ID here] |
-| **University Email** | [yourid]@std.psau.edu.sa |
-| **GitHub Username** | [your-github-username] |
-| **Repository Link** | [Paste your repository link here] |
+| **Full Name** | Joud Alhassan |
+| **Student ID** | 444051250 |
+| **University Email** | 444051250@std.psau.edu.sa |
+| **GitHub Username** | 444051250-ops |
+| **Repository Link** | https://github.com/444051250-ops/OS-Assignment1-Joud-Alhassan |
  
 ---
 
@@ -129,17 +129,24 @@
 
 ## Your Development Log
 
-### Entry 1 - [Date and Time]
+### Entry 1 - [September 29, 2026, 8:00 PM]
 **What I did**:
+set my GitHub account and forked repository  
 
 **Details**:
-
+- Created a GitHub account with my university email  
+- Forked the starter repository
+- Renamed it to my name and made sure it is public
+- Set my student ID in line 150
+  
 **Challenges**:
+In the student information table, i wrote my name in the wrong column 
 
 **Solution**:
+Restored the field labels and put my info in the right column 
 
 **Time spent**:
-
+25 minutes
 ---
 
 ### Entry 2 - [Date and Time]
