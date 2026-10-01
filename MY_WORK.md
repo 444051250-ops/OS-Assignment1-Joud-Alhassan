@@ -149,17 +149,24 @@ Restored the field labels and put my info in the right column
 25 minutes
 ---
 
-### Entry 2 - [Date and Time]
+### Entry 2 - [October 1, 2026, 12:00 PM]
 **What I did**:
+started the program for the first time
 
 **Details**:
+- Checked my java version
+- installed git 
+- checked if i have the extension pack for java in VS code
+- Ran the code in SchedulerSimulation and i got 12 processes and time quantum of 4s 
 
 **Challenges**:
+git wasnt recognized
 
 **Solution**:
+downloaded git and it worked
 
 **Time spent**:
-
+30 minutes
 ---
 
 ### Entry 3 - [Date and Time]
