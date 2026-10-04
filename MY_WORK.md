@@ -169,17 +169,23 @@ downloaded git and it worked
 30 minutes
 ---
 
-### Entry 3 - [Date and Time]
+### Entry 3 - [October 4, 2026, 9:50 AM]
 **What I did**:
+Implemented Process Priority and Context Switch Counter 
 
 **Details**:
+- Read the code and understood it 
+- Added a priority feature that generates a random number from 1 to 10
+- Added a context switch counter and the total is 26
 
 **Challenges**:
+After adding the priority i noticed the burst time of the processes changed
 
 **Solution**:
+I understood that the random generator gives numbers in order so adding a number to priority changed the burst time
 
 **Time spent**:
-
+50 minutes
 ---
 
 ### Entry 4 - [Date and Time]
