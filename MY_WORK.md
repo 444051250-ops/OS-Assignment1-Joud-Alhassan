@@ -188,16 +188,24 @@ I understood that the random generator gives numbers in order so adding a number
 50 minutes
 ---
 
-### Entry 4 - [Date and Time]
+### Entry 4 - [October 5 , 2026 , 3:30 pm]
 **What I did**:
+Implemented waiting time tracking and added comments to all features
 
 **Details**:
+- Added lastReadyTime and waitingTime fields to process class
+- Used System.currentTimeMillis() to start timer and stop it 
+- Made a summary table printing processes,burst time,waiting, and turnaround 
+- Added clear comments to feature 1 and 2
 
 **Challenges**:
+I wrote System.out.println(lastReadyTime =System.currentTimeMillis())in one line 
 
 **Solution**:
+i split it into two lines 
 
 **Time spent**:
+1 hour and 30 minutes
 
 ---
 
