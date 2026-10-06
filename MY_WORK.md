@@ -209,16 +209,22 @@ i split it into two lines
 
 ---
 
-### Entry 5 - [Date and Time]
+### Entry 5 - [October 6, 2026 , 11:00 PM]
 **What I did**:
+Answered the technical questions
 
 **Details**:
+- Answered thread vs process and linked it to new Thread(process) in addProcessToQueue()
+- Used P5 from my output for the Ready Queue question
+- Explained the thread lifecycle of P1 from New to Terminated
+- Wrote two real-world examples for Round-Robin
 
 **Challenges**:
-
+It was hard to find the lines where P5 was re-queued because the output is very long
 **Solution**:
-
+I used Ctrl+F in the terminal to search for P5 and found the two re-queue parts
 **Time spent**:
+30 minute
 
 ---
 
