@@ -320,8 +320,11 @@ i split it into two lines
 > 💡 **TIP:** Note that the class named `Process` in our code is a *simulated* process, and it is run by a real Java *thread*. Explain that distinction and point to the `new Thread(process)` line in `addProcessToQueue()`.
 
 **Your Answer:** *(3-5 sentences)*
-
-[Write your answer here.]
+A process is a program that is currently in execution within an operating system,
+a thread is the smallest unit of execution within a process.
+thread takes less time to create and terminate, and the context switch is faster, also shares data with other threads
+each process is run by a real thread created in addProcessToQueue() with new Thread(process)
+i used thread because it is lighter than process
 
 ## Question 2: Ready Queue Behavior
 
@@ -333,10 +336,32 @@ i split it into two lines
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+When a process does not finish within its time quantum it leaves the CPU and goes back to the end of the ready queue.
+addProcessToQueue() creates a new thread for it and adds it to the queue again
+For example: P5 had a burst time of 9492ms and my time quantum was 4000ms so it needed 3 turns
+P5 was re-queued 2 times: after the first turn 5492ms was left and after the second turn 1492ms was left Re-queueing is fair because no process can keep the CPU for a long time
+and every process gets a turn.
 
 Example from my output:
-```
+  ? P5 executing quantum [4000ms]
+  ? P5 completed quantum 4000ms │ Overall progress: [████████░░░░░░░░░░░░] 42%
+     Remaining time: 5492ms
+  ? P5 yields CPU for context switch
+
+  ? P5 (Priority: 5) added to ready queue │ Burst time: 9492ms
+┌─ Ready Queue ─────────────────────────────────────────────────────────────────
+│ [P7 ? P8 ? P9 ? P10 ? P11 ? P12 ? P1 ? P2 ? P3 ? P4 ? P5]
+
+...
+
+  ? P5 executing quantum [4000ms]
+  ? P5 completed quantum 4000ms │ Overall progress: [████████████████░░░░] 84%
+     Remaining time: 1492ms
+  ? P5 yields CPU for context switch
+
+  ? P5 (Priority: 5) added to ready queue │ Burst time: 9492ms
+┌─ Ready Queue ─────────────────────────────────────────────────────────────────
+│ [P7 ? P8 ? P9 ? P10 ? P11 ? P12 ? P5]
 [Paste a relevant snippet from your program output here showing a process being re-queued]
 ```
 
@@ -352,14 +377,21 @@ Example from my output:
 **Your Answer:** *(3-5 sentences overall; one short explanation per state)*
 
 1. **New**: [When is P1 in the New state?]
+P1 is New when its thread is created with new Thread(process) in addProcessToQueue()
 
 2. **Runnable**: [When does P1 become Runnable?]
+P1 becomes Runnable when currentThread.start() is called
 
 3. **Running**: [When is P1 Running?]
+P1 is Running when run() starts and it prints "P1 executing quantum"
 
 4. **Waiting**: [When and why would a thread be Waiting?]
+P1 is Waiting when Thread.sleep() is called inside run()
+The main thread also waits at join() until P1 finishes
 
 5. **Terminated**: [When is P1 Terminated?]
+P1 is Terminated when run() ends
+P1 needed 2 turns so a new thread was created for the second turn
 
 ## Question 4: Real-World Applications
 
@@ -369,21 +401,26 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences per example)*
 
-### Example 1 (operating-system level): [Name of scenario]
+### Example 1 (operating-system level):Running many programs on a computer
+
 
 **Description**:
-[Describe the real-world scenario.]
+When I open Chrome and VS Code and Spotify the CPU runs all of them
+The OS gives each program a small time then switches to the next one
+Each program is like a process the small time is the time quantum and switching is a context switch
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+It is fair because every program gets a turn
+its faster so it feels like all programs run together
 
-### Example 2: [Name of application/scenario]
+### Example 2: A web server with many users
 
 **Description**:
-[Describe the real-world scenario or application.]
-
+A website like the university LMS has many students using it at the same time
+The server uses a thread for each user like my code uses a thread for each process
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+its fair because every user gets a turn
+A long request does not block the others like P5 in my output did not block the other processes
 
 ## Summary
 
