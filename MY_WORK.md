@@ -271,7 +271,11 @@ I used Ctrl+F in the terminal to search for P5 and found the two re-queue parts
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+learned that a thread is a small unit that runs inside a program and 
+learned how to create a thread with new Thread(process) and start it with start().
+I also learned that join() makes the main thread wait until the other thread finishes.
+Thread.sleep() is used to make the thread wait like it is doing real work.
+The thing that surprised me is that P1 waited 44577ms even though it was the first process.
 
 ## Question 2: What was the most challenging part of this assignment?
 
@@ -279,7 +283,11 @@ I used Ctrl+F in the terminal to search for P5 and found the two re-queue parts
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+The most challenging part was Feature 3 the waiting time tracking.
+It was hard because i needed to know exactly when the process starts waiting and when it stops.
+A process can wait many times so i had to add the time each time it waits.
+I also made a mistake when i wrote println and lastReadyTime in one line so it printed a big number.
+It was also confusing at first that the waiting times was very big.
 
 ## Question 3: How did you overcome the challenges you faced?
 
@@ -287,7 +295,11 @@ I used Ctrl+F in the terminal to search for P5 and found the two re-queue parts
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+i read the README and the code again to understand where each part happens.
+asked for help to understand the idea of starting and stopping the timer.
+and tested the program after every small change to see if it works.
+When i saw the big number printed I split the line into two lines and it worked.
+This helped me trust my code and understand it better.
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
@@ -295,7 +307,11 @@ I used Ctrl+F in the terminal to search for P5 and found the two re-queue parts
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+Multithreading is used in many apps I use every day.
+like in YouTube one thread plays the video while another thread loads the next part.
+In WhatsApp I can send messages while photos are downloading at the same time.
+In games one thread handles the graphics and another handles the player input.
+Without threads the app would freeze while waiting for one task to finish.
 
 ### Optional: What would you like to learn more about?
 
