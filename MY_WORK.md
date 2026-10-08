@@ -228,30 +228,40 @@ I used Ctrl+F in the terminal to search for P5 and found the two re-queue parts
 
 ---
 
-### Entry 6 - [Optional - Date and Time]
+### Entry 6 - [October 8, 2026, 4:30 PM]
 **What I did**:
+Answered the reflection questions and wrote the summary
 
 **Details**:
+- Answered the 4 reflection questions about my experience
+- Filled in the development log summary
 
 **Challenges**:
+-
 
 **Solution**:
+-
 
 **Time spent**:
-
+30 minute
 ---
 
 ## Development Log Summary
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [X hours]
+**Total time spent on assignment**: 
+4 hours and 30 minutes
 
 **Most challenging part**:
+Feature 3 because i had to start and stop the timer at the right places to calculate the waiting time
 
 **Most interesting learning**:
+How Round-Robin is fair
+and that P1 waited a long time even though it was the first process
 
 **What I would do differently next time**:
+Start earlier and test my code after every small change
 
 ---
 
